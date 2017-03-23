@@ -1,0 +1,13 @@
+ <md-toolbar class="accent md-padding" md-colors="{background: 'blue-grey-900'}" layout="row" layout-align="center end">
+    <!-- Logo -->
+    <img class="" ng-if="$ctrl.logo" ng-src="img/{{ $ctrl.logo }}" />
+    <div class="md-padding">
+        <span class="md-title">{{ $ctrl.phrase }}</span>
+    </div>
+    <!-- Navigation -->
+    <nav class="md-padding" flex="66" layout="row" layout-align="end end">
+        <a class="link md-subhead" ng-repeat="link in $ctrl.links" href="{{ link.href }}"
+            ng-class="link.isActive ? 'link-active' : '' " ng-click="$ctrl.onLinkClicked(link)">{{ link.label }}</a>
+    </nav>
+
+ </md-toolbar>

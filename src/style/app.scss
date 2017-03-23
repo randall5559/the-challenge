@@ -1,0 +1,105 @@
+@import '../../node_modules/font-awesome/css/font-awesome.min.css';
+
+// variables
+$white: white;
+$red: red;
+
+// prevent double curly brace notation from displaying momentarily before angular.js compiles/interpolates document
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+ }
+
+// tag styles
+* {
+  border-radius: 0px !important;
+}
+
+html, body {
+  background: #9F222A url('../public/img/flat-world-map.svg') no-repeat center 100px;
+}
+
+h1, h2, h3, h4, h5 {
+  padding: 5px;
+}
+
+hr {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+md-list-item:hover {
+  background-color: #ececec; 
+}
+
+// custom styles
+.container {
+  .link {
+    & { color: $white;
+        padding: 0 20px;
+        text-decoration: none;
+    }
+    &:hover {
+        color: #F15E22;
+    }
+  }
+
+  .link-active {
+    color: #F15E22;
+  }
+
+  .box {
+    width: 70%;
+    height: 200px;
+    background: #FFF;
+    margin: 40px auto;
+  }
+
+  .sheet {
+    box-shadow: 0 10px 6px -6px #777;
+  }
+
+  .text-red {
+    color: $red;
+  }
+
+  .text-white {
+    color: $white;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-bold {
+    font-weight: bold;
+  }
+
+  .p-subheader {
+    margin: 5px 5px 0 5px;
+  }
+
+  .margin-10 {
+    margin: 10px;
+  }
+
+  .padding-10 {
+    padding: 10px;
+  }
+
+  .margin-top-20 {
+    margin-top: 20px;
+  }
+
+  .margin-no-top {
+    margin-top: 0;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .icon-style {
+    color: gray;
+    font-size:30px;
+  }
+}

@@ -1,0 +1,83 @@
+<md-content flex layout-padding>
+    <a class="right md-padding" href="mailto:randallakers.work@gmail.com">You got questions? We might have answers!</a>
+    
+    <md-toolbar class="md-warn margin-top-20">
+        <div class="md-toolbar-tools">
+        <h2 class="md-flex">UI/UX Challenge</h2>
+        </div>
+    </md-toolbar>
+    <p>This challenge is to help us to assess your ability to prototype (maybe rapidly) using front-end technologies. We ask that the deliverable be in HTML so that it can be loaded into browser (Chrome) for review. Given that there is a tight deadline around this effort, it will be up to you to work on the elements/functionality that best tell the story. When you are finished we will have a call where you can walk us through the work and answer any questions.</p>
+
+    <p>Please contact us with any questions as time is important to this exercise.</p>
+
+    <p class="p-subheader text-bold">Rules</p>
+    <p class="margin-no-top">You are allowed to prototype with any technologies, frameworks, plugins, or libraries you are familiar with. This includes any tooling (Grunt, Gulp, Yoeman, Bower, etc) you use to speed up your process. Please do not use any backend technologies and make sure that when you deliver your prototype it can easily be reviewed. If it is easier to host your prototype someplace, please be prepared to provide your source code including any tooling dependencies/code (package.json, bower.json, etc).</p>
+
+    <p>We would prefer to see the use of Angular if you have the skill-set, but in general we won’t limit what you can use. The goal of this exercise is to see what you can create and to what degree you can communicate your intentions and solution using web technologies to prototype.</p>
+
+
+
+    <md-toolbar class="md-warn margin-top-20">
+        <div class="md-toolbar-tools">
+        <h2 class="md-flex">Overview of UI Prototype</h2>
+        </div>
+    </md-toolbar>
+
+    <p>As part of a new application you have been tasked with creating a landing page/dashboard prototype to show at the next Managers Meeting. This landing page will allow users to access all the available 'records' for a specific set of data with some additional features outlined below.</p>
+
+    <p class="p-subheader text-bold">Records/Model (see <a href="data/mock-data.json" target="_blank">Mocked Data</a>)</p>
+    <p class="p-subheader text-bold">Each record in the model contains the following properties:</p>
+    <div class="md-padding"> 
+        <ul>
+            <li>Title – Text</li>
+            <li>Division - Text</li>
+            <li>Project Owner - Text</li>
+            <li>Budget – Number, should be displayed as dollars: $XXX.XX</li>
+            <li>Status - Text</li>
+            <li>Created Date – date: MM/DD/YYYY</li>
+            <li>Modified Date – date: MM/DD/YYYY</li>
+        </ul>
+    </div>
+
+    <p class="p-subheader text-bold">Functionality/Behavior</p>
+    <div class="md-padding">
+        <ul>
+            <li>Users need to be able to filter/search for the records on any one of the given properties of
+                a record. When filter/searching by date users will supply a range, all other fields would
+                use their corresponding data type. Users can use more than one filter at a time.
+            </li>
+            <li>Each record needs to allow a user to: change the status, change the Project Owner, and
+                adjust the budget. These features should be available in-line without going to another page.
+                When a record is changed please provide some sort of feedback to the user.
+            </li>
+            <li>Each record needs to supply a link/button/etc to go to a more in-depth page. The link is not
+                active and you don’t need to create the secondary page. This is only to show that each
+                record gives the user the ability to go to another page.
+            </li>
+            <li>Management has asked that the screen offer some high-level/summations/<wbr>statistics about the
+                current records. They are not interested in charts/graphics (they are minimalists at heart),
+                but want some statistics related to the records in the UI, something that tells the story at
+                a glance. They have given you some discretion in terms of what to show and how to show it,
+                but it should reflect the current dataset.
+            </li>
+            <li>Please provide inactive/placeholder (non-working) UI elements for Users to:
+                <ul>
+                    <li>add a new record</li>
+                    <li>export the records on screen to Excel or PDF</li>
+                </ul>
+            </li>
+            <li>The name/title of the application/page is: Project Dashboard</li>
+        </ul>
+    </div>
+
+    <p class="p-subheader text-bold">Technical Requirements</p>
+    <p>Users will be using this from their desktop on at least a 1280x768 monitor. There is no need to build this to be mobile friendly as most users will use this on their desktop. The target browser is the latest stable version of Chrome.</p>
+
+
+    <md-toolbar class="md-warn margin-top-20">
+        <div class="md-toolbar-tools">
+        <h2 class="md-flex">Mock Data</h2>
+        </div>
+    </md-toolbar>
+    <p><a href="data/mock-data.json" target="_blank">Mocked Data</a></p>
+</md-content>

@@ -1,0 +1,44 @@
+<md-toolbar class="accent" md-colors="{background: 'deep-orange-500'}" md-scroll-shrink>
+    <div class="md-toolbar-tools">Project Dashboard</div>
+</md-toolbar>
+
+<div class="md-padding" layout="row" layout-align="center center">
+    <div flex-xs flex-gt-xs="90" layout="column">
+      <md-card md-theme-watch>
+         <!-- Filter Result Section -->
+        <filter records="$ctrl.records" results="$ctrl.results" no-matches="$ctrl.noMatches"></filter>
+
+
+        <!-- Data Stat Component -->
+        <stats total="$ctrl.records.length" filter-total="$ctrl.results.length" ></stats>
+
+
+        <!-- Results Section -->
+        <md-subheader class="md-no-sticky">Results for Project Owners:
+            <md-button class="md-raised">Add a New Record</md-button>
+            <md-button class="md-raised">Export to Excel</md-button>
+        </md-subheader>
+
+        <md-card-content>
+            <h2 class="text-red" ng-if="$ctrl.noMatches">No matches found!</h2>
+            <md-list-item class="secondary-button-padding" ng-repeat="item in $ctrl.results track by $index">
+                <p>{{ item.project_owner }}</p>
+                <md-menu class="md-secondary">
+                    <md-button class="">
+                            <i class="fa fa-pencil-square-o icon-style" aria-hidden="true"></i>
+                    </md-button>
+                    <md-menu-content width="4">
+                        <md-menu-item ng-repeat="(key, value) in item">
+                            <strong>{{ $ctrl.titleCase(key) }}:</strong>
+                            <input type="text" value="{{ value }}"
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button ng-click="$ctrl.showSimpleToast()">Update Info</md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </md-list-item>
+        </md-card-content>
+      </md-card>
+    </div>
+</div>

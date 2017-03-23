@@ -1,0 +1,26 @@
+<md-subheader class="md-no-sticky">Filter Results:</md-subheader>
+    <md-card-title>
+    <md-card-title-text layout="row">
+    <md-button ng-click="$ctrl.resetData()"><i class="fa fa-refresh icon-style" aria-hidden="true"></i></md-button>
+    <md-autocomplete flex="45"
+        md-input-name="autocompleteField"
+        md-input-minlength="2"
+        md-input-maxlength="18"
+        md-no-cache="$ctrl.noCache"
+        md-selected-item="$ctrl.selectedItem"
+        md-search-text="$ctrl.searchText"
+        md-search-text-change="$ctrl.searchTextChange($ctrl.searchText)"
+        md-items="item in []"
+        md-item-text="item.project_owner"
+        md-floating-label="Search by owner, title, division and status">
+        <md-item-template>
+            <span md-highlight-text="ctrl.searchText">{{ item.project_owner }} | {{ item.division }} | {{ item.title }}</span>
+        </md-item-template>
+    </md-autocomplete>
+
+    <md-datepicker class="margin-top-20" ng-model="$ctrl.startDate" md-placeholder="Start date" ></md-datepicker>
+    <md-datepicker class="margin-top-20" ng-model="$ctrl.endDate"  md-placeholder="End date" ></md-datepicker>
+    <md-button ng-click="$ctrl.searchDate($ctrl.startDate , $ctrl.endDate, $ctrl.searchText)"><i class="fa fa-search icon-style" aria-hidden="true"></i></md-button>
+
+    </md-card-title-text>
+</md-card-title>
